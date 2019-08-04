@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+{# q : Question객체 한개 c_list : Choice객체들 #}
+<h2>{{q.title}} 투표결과</h2>
+<ul>
+	{% for c in c_list %}
+		<li> {{c.name}} - {{c.votes}}표 </li>
+	{% endfor %}
+</ul>
+<!-- <a href="/vote/">메인화면으로 돌아가기</a> -->
+<a href="{% url 'main' %"> 메인화면으로 돌아가기</a>
+</body>
+</html>

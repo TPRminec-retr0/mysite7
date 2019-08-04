@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+{# q : Question 객체를 저장하고있는 리스트 # }
+<ul>
+	<li>설문지 제목과 생성일</li>
+	{% for obj in q %}
+	<li>
+	<!-- 사이트주소를 저장하는 href속성에 /로 시작하면 자신의 도메인 주소를 자동으로 설정 -->
+		<a href="/vote/{{ obj.id }}/">
+			{{ obj.title }} - {{ obj.pub_date }}
+		</a>
+	</li>
+	{% endfor %}
+</ul>
+</body>
+</html>
